@@ -1,0 +1,12 @@
+col-4{
+    background-color: blue;
+}
+row{
+    height: fit-content;
+    width: max-content;
+    padding: 0%;
+}
+list{
+    flex-direction: column;
+    border-radius: 10px;
+}
