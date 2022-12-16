@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="index.css"> 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto ;
+    }
+    
+    .grid-item {
+      background-color:cornsilk;
+      grid-column: 1 / 5;
+      padding: 1px;
+      text-align: right;
+    }
+    .grid-item2{
+        background-color:cornsilk;
+      padding: 1px;
+      text-align: right;
+    }
+    </style>
+    <title>NFT</title>
+</head>
+<body style="background-color:cornsilk">
+    <div class="container text-center">
+
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar"  style="background-color: bisque;">
+                    <div class="container-fluid">
+                      <a class="navbar-brand">NFT Dashboard</a>
+                      <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-light" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </nav>
+
+                  </div>
+                  <div class="card" style="width: 17rem; margin-top: 1rem; margin-right: 0.5rem; margin-left: 1rem;">
+                    <img  style="padding-top: 0.5rem; height: 170px;" src="image1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Crypto Raptors</p>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 17rem; margin-top: 1rem; margin-right: 0.5rem;">
+                    <img style="padding-top: 0.5rem; height: 170px;" src="image2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Magic Bullets</p>
+                    </div>
+                  </div>
+                  <div class="card" style="width: 17rem; margin-top: 1rem; margin-right: 0.5rem;">
+                    <img style="padding-top: 0.5rem; height: 170px;" src="image3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Musically</p>
+                    </div>
+                    </div>
+                    <div class="card" style="width: 17rem; margin-top: 1rem; margin-right: 0.5rem;">
+                        <img style="padding-top: 0.5rem; height: 170px;" src="image4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Virtual Fashion</p>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="grid-container">
+                    <div class="grid-item">
+                  <div id="myPlot" style="width:100%;max-width:700px; margin-top: 2rem;"></div>
+
+<script>
+var xArray1 = [50,60,70,80,90,100,110,120,130,140,150];
+var yArray1 = [7,8,8,9,9,9,10,11,14,13,15];
+var xArray2 = [50,60,70,80,90,100,110,120,130,140,150];
+var yArray2 = [4,8,14,15,9,9,12,10,12,14,11];
+var xArray3 = [50,60,70,80,90,100,110,120,130,140,150];
+var yArray3 = [5,5,8,10,12,11,9,12,11,11,13];
+var xArray4 = [50,60,70,80,90,100,110,120,130,140,150];
+var yArray4 = [8,15,11,7,10,9,13,9,10,13,9];
+var xArray5 = [50,60,70,80,90,100,110,120,130,140,150];
+var yArray5 = [11,8,8,11,9,7,12,13,9,12,8];
+
+// Define Data
+var data = [{
+  x: xArray1,
+  y: yArray1,
+  mode:"lines",
+  name:"Crypto Raptors"
+},
+{
+  x: xArray2,
+  y: yArray2,
+  mode:"lines",
+  name:"Magic Bullets"
+},
+{
+  x: xArray3,
+  y: yArray3,
+  mode:"lines",
+  name:"Musically"
+},
+{
+  x: xArray4,
+  y: yArray4,
+  mode:"lines",
+  name:"Virtual Fashion"
+},
+{
+  x: xArray5,
+  y: yArray5,
+  mode:"lines",
+  name:"Real-world Assets"
+}];
+
+// Define Layout
+var layout = {
+  xaxis: {range: [40, 160], title: "NFT sold"},
+  yaxis: {range: [5, 16], title: "Price in Millions"},  
+  title: "Nft's Sold vs. Selling price"
+};
+
+// Display using Plotly
+Plotly.newPlot("myPlot", data, layout);
+</script>
+</div>
+<div style="margin-top: 30px" class="grid-item2">
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <img style="width:250px" src="image1.jpg">
+          </li>
+          <li class="list-group-item">It’s best time to sell Crypto Raptors.</li>
+          <li class="list-group-item">
+            <img style="width:250px" src="image5.jpg">
+          </li>
+          <li class="list-group-item">It’s best time to buy real-world assets.</li>
+        </ul>
+      </div>
+  </div>
+</div>
+</body>
+</html>
+
+                  </div>
+                  </div>
+                  
+    </body>
+    </html>
