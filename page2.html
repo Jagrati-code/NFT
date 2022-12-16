@@ -20,7 +20,9 @@
             <nav class="navbar"  style="background-color: bisque;">
                 <div class="container-fluid">
                   <a class="navbar-brand">NFT Dashboard</a>
-                  <form class="d-flex" role="search">
+                  <a class="nav-link active" aria-current="page" href="login.html">Signin</a>
+                      <a class="nav-link" href="#">Signup</a>
+                      <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-light" type="submit">Search</button>
                   </form>
@@ -91,15 +93,15 @@
                   
                   // Define Layout
                   var layout = {
-                    xaxis: {range: [40, 160], title: "Amount of nft"},
+                    xaxis: {range: [40, 160], title: "NFT Sold"},
                     yaxis: {range: [5, 16], title: "Price in Millions"},  
-                    title: "Price of nft and amount of nft"
+                    title: "Nft's Sold vs. Selling price"
                   };
                   
                   // Display using Plotly
                   Plotly.newPlot("myPlot", data, layout);
                   </script>
-                  
+                  <a class="btn btn-outline-dark" style="margin-top: 1rem;" href="analysis.html" role="button">Analysis</a>
              
               </div>
         <div class="col-4">
